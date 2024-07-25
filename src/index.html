@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <hero>
+        <h1>Administrador de tareas</h1>
+        <p>HTML, JS, CSS, SQL SERVER</p>
+    </hero>
+    <section>
+        <form id="formulario">
+            <input type="text" name="tarea" id="tarea" placeholder="Tarea">
+            <input type="date" name="fecha" id="fecha">
+            <input type="submit" value="Agregar">
+        </form>
+    </section>
+    <main>
+        <ul >
+
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tarea</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="task-list">
+            </tbody>
+        </table>
+    </main>
+    <!-- Contenedor para el formulario de edición -->
+<div id="edit-form-container" style="display:none;">
+    <form id="edit-form">
+        <label for="tareaEdit">Task Name:</label>
+        <input type="text" name="tarea" id="tareaEdit" placeholder="Tarea" required>
+        <br>
+        <label for="fechaEdit">Date:</label>
+        <input type="date" name="fecha" id="fechaEdit" required>
+        <br>
+        <input type="hidden" name="id" id="idEdit">
+        <button type="submit">Edit Task</button>
+        <button type="button" id="cancel-edit">Cancel</button>
+    </form>
+</div>
+
+    <script src="./index.js" type="module"></script>
+</body>
+</html>
